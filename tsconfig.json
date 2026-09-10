@@ -9,13 +9,14 @@
         "**/*adrum*"
     ],
     "compilerOptions": {
-        "module": "CommonJS",
+        "module": "none",
         "target": "es2020",
         "allowJs": true,
         "checkJs": true,
         "outDir": "build",
         "strictNullChecks": true,
         "strict": false,
+        "types": ["jasmine", "chance", "angular"],
         "plugins": [
             {
                 "name": "typescript-strict-plugin",

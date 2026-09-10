@@ -1,9 +1,10 @@
 {
     "name": "now",
     "version": "1.0.0",
-    "dependencies": {
+    "devDependencies": {
         "@types/angular": "^1.8.4",
-        "@types/jasmine": "3.3.0",
-        "@types/chance": "^1.1.6"
+        "@types/chance": "^1.1.6",
+        "@types/jasmine": "^3.3.0",
+        "typescript": "^7.0.2"
     }
 }
