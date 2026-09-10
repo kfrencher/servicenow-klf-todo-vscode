@@ -214,30 +214,35 @@
     "Scheduled Script Executions": {
       "Add user to role": {
         "sys_id": "5af622be83dd8b143c9299e0deaad3b4",
-        "LIVE": false,
+        "LIVE": true,
         "UNCHANGED": true,
-        "CURRENT_SERVER_MOD_TIME": 1781041511000,
-        "sys_updated_on": "2026-06-09 17:45:11",
-        "SERVER_MOD_TIME": 1781041511000,
-        "LOCAL_MOD_TIME": 1789041433470
+        "CURRENT_SERVER_MOD_TIME": 1789060879000,
+        "sys_updated_on": "2026-09-10 13:21:19",
+        "SERVER_MOD_TIME": 1789060879000,
+        "LOCAL_MOD_TIME": 1789046478498,
+        "CURRENT_LOCAL_MOD_TIME": 1789046478498,
+        "lastmodified": 1789046478845
       },
       "Add group to role": {
         "sys_id": "7a2da6ba8311cb143c9299e0deaad35b",
-        "LIVE": false,
+        "LIVE": true,
         "UNCHANGED": true,
-        "CURRENT_SERVER_MOD_TIME": 1781043279000,
-        "sys_updated_on": "2026-06-09 18:14:39",
-        "SERVER_MOD_TIME": 1781043279000,
-        "LOCAL_MOD_TIME": 1789041433475
+        "CURRENT_SERVER_MOD_TIME": 1789060893000,
+        "sys_updated_on": "2026-09-10 13:21:33",
+        "SERVER_MOD_TIME": 1789060893000,
+        "LOCAL_MOD_TIME": 1789046492405,
+        "CURRENT_LOCAL_MOD_TIME": 1789046492405,
+        "lastmodified": 1789046492664
       },
       "Move to demo scope": {
         "sys_id": "8674f5fa83598b143c9299e0deaad354",
-        "LIVE": false,
+        "LIVE": true,
         "UNCHANGED": true,
         "CURRENT_SERVER_MOD_TIME": 1781028749000,
         "sys_updated_on": "2026-06-09 14:12:29",
         "SERVER_MOD_TIME": 1781028749000,
-        "LOCAL_MOD_TIME": 1789041433472
+        "LOCAL_MOD_TIME": 1789041433472,
+        "CURRENT_LOCAL_MOD_TIME": 1789041433472
       }
     }
   },
@@ -260,9 +265,10 @@
     "Tables": {
       "Task": {
         "sys_id": "3658447f97a02550b2e1f97e6253afbd",
-        "LIVE": false,
+        "LIVE": true,
         "UNCHANGED": true,
-        "CURRENT_SERVER_MOD_TIME": 1681315551000
+        "CURRENT_SERVER_MOD_TIME": 1681315551000,
+        "CURRENT_LOCAL_MOD_TIME": 1789041433257
       }
     }
   }

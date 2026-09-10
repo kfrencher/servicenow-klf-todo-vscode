@@ -1,10 +1,12 @@
-gs.info('Trying to add role');
-const arthurPines = '30de78a030de223030deb89030de0f10';
-const demoAdmin = '3595415a83d187143c9299e0deaad3a4';
-const todoApprover = '7fc6bc3c47541a1058ceeb02d16d4307';
-const userRole = new GlideRecord('sys_user_has_role');
-userRole.newRecord();
-userRole.user = arthurPines;
-userRole.role = todoApprover;
-userRole.update();
-gs.info('Completed add role');
+(function() {
+  gs.info('Trying to add role');
+  const arthurPines = '30de78a030de223030deb89030de0f10';
+  const demoAdmin = '3595415a83d187143c9299e0deaad3a4';
+  const todoApprover = '7fc6bc3c47541a1058ceeb02d16d4307';
+  const userRole = new GlideRecord('sys_user_has_role');
+  userRole.newRecord();
+  userRole.user = arthurPines;
+  userRole.role = todoApprover;
+  userRole.update();
+  gs.info('Completed add role');
+})();
