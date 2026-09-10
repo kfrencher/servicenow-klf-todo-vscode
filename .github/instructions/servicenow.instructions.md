@@ -155,6 +155,47 @@ When searching for code or creating new files:
 3. Navigate to the appropriate `{ApplicationName}/src/` directory
 4. Follow the ServiceNow file structure (Server Development, Client Development, etc.)
 
+## Querying the Live Instance with @servicenow/sdk
+
+If the `@servicenow/sdk` package is available (check with
+`npx @servicenow/sdk query --help`), it can be used to query data and metadata
+directly from the synced ServiceNow instance — useful for looking up live records,
+choice values, or table schemas that aren't fully visible from local source alone.
+
+**Basic usage:**
+```
+npx @servicenow/sdk query <table> -q "<encoded query>" -f "<comma-separated fields>" --output json
+```
+
+- `<table>` — the table name (e.g. `sys_user`, `x_<scope>_<app>_task`)
+- `-q`/`--query` — an encoded query string (`sysparm_query`), e.g. `active=true^priority<=2`
+- `-f`/`--fields` — comma-separated fields to return (`sysparm_fields`); omit to return all fields
+- `--output json` — machine-readable JSON envelope (`{ ok, hasMore, nextOffset, records }`)
+- Other useful flags: `--limit`, `--offset`, `--display-value`, `-a/--auth` (credential
+  alias). Run `npx @servicenow/sdk query --help` for the full list.
+
+### Retrieving a table's schema (data model)
+
+Files under an application's `src/Data Model/Tables/*.table.now` are **stub files**
+containing only the table's `sys_db_object` sys_id — they do not contain the schema
+itself. To get the actual field/data model:
+
+1. **Resolve the table name** from the stub file's sys_id via `sys_db_object`:
+   ```
+   npx @servicenow/sdk query sys_db_object -q "sys_id=<sys_id from .table.now file>" -f "name,label,super_class" --output json
+   ```
+   This returns the real table name (e.g. `x_912467_klf_todo_task`).
+
+2. **Query field definitions** from `sys_dictionary` filtered by that table name:
+   ```
+   npx @servicenow/sdk query sys_dictionary -q "name=<table_name>" -f "element,column_label,internal_type,max_length,mandatory,reference,default_value,active" --limit 200 --output json
+   ```
+   Each record is one field (`element`) with its label, type (`internal_type`), max
+   length, whether it's mandatory, the referenced table (`reference`, if type is
+   `reference`), and default value. Standard `sys_*` audit fields (sys_id,
+   sys_created_on/by, sys_updated_on/by, sys_mod_count) are included alongside the
+   application-specific fields.
+
 ## ServiceNow Development Best Practices
 1. **Use Script Includes for Reusable Code:**
    - Encapsulate reusable logic in Script Includes to promote code reuse and maintainability.

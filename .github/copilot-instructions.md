@@ -14,6 +14,12 @@ automatically based on file path/type (`applyTo` front matter). Look there for:
 - Facts specific to an individual application in this workspace (name, sys_id, scope,
   shared library file names, etc.)
 
+**Need live data from the ServiceNow instance** (e.g. record values, scheduled job
+run/schedule info, table schemas, choice values — anything not fully captured in the
+local synced source)? See the "Querying the Live Instance with `@servicenow/sdk`"
+section in `.github/instructions/servicenow.instructions.md` before assuming the
+answer can be found from local files alone.
+
 ## Repository layout
 
 Each ServiceNow scoped application is a top-level folder named after the application,
