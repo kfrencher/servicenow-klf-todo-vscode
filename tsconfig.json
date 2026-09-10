@@ -1,0 +1,34 @@
+{
+    "exclude": [
+        "lib/dts/clientAPI.d.ts",
+        "lib/dts/serverAPI.d.ts",
+        "dist",
+        "build",
+        "gulpfile.js",
+        "**/Service Portal/**/*",
+        "**/*adrum*"
+    ],
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "es2020",
+        "allowJs": true,
+        "checkJs": true,
+        "outDir": "build",
+        "strictNullChecks": true,
+        "strict": false,
+        "plugins": [
+            {
+                "name": "typescript-strict-plugin",
+                "paths": [
+                    "KLF Todo/src/Server Development/Script Includes"
+                ]
+            }
+        ]
+    },
+    "serviceNowScopedAppInfo": [
+        {
+            "name": "KLF Todo",
+            "scriptIncludePath": "KLF Todo/src/Server Development/Script Includes"
+        }
+    ]
+}

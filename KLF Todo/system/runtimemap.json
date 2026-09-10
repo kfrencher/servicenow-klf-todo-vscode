@@ -1,0 +1,229 @@
+{
+  "system": {
+    "sys_script_client": true,
+    "sys_ui_script": true,
+    "sys_ws_operation": true,
+    "sys_web_service": true,
+    "ecc_agent_script_include": true,
+    "sys_script_ajax": true,
+    "clone_cleanup_script": true,
+    "sys_ui_list_script_client": true,
+    "sys_ui_list_script_server": true,
+    "sys_transform_script": true,
+    "sys_script_email": true,
+    "sys_push_notif_act_script": true,
+    "pa_scripts": true,
+    "sys_script": true,
+    "sys_script_fix": true,
+    "sysauto_script": true,
+    "sysevent_script_action": true,
+    "sys_script_include": true,
+    "sys_ui_action": true,
+    "catalog_script_client": true,
+    "sp_angular_provider": true,
+    "sp_widget": true,
+    "sys_script_vtable": true,
+    "sys_script_validator": true,
+    "sys_widgets": true
+  },
+  "Server Development": {
+    "UI Actions": {
+      "Hide Submit": {
+        "sys_id": "6a03793f97a82550b2e1f97e6253afbf",
+        "sys_updated_on": "2025-10-29 18:57:35",
+        "SERVER_MOD_TIME": 1761778655000,
+        "LOCAL_MOD_TIME": 1761764254292,
+        "CURRENT_LOCAL_MOD_TIME": 1761764254292,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1761778655000,
+        "lastmodified": 1761764254625
+      },
+      "Hide Update": {
+        "sys_id": "34ebf98897bc6550b2e1f97e6253af26",
+        "sys_updated_on": "2024-07-26 13:59:32",
+        "SERVER_MOD_TIME": 1722016772000,
+        "LOCAL_MOD_TIME": 1724623848377,
+        "CURRENT_LOCAL_MOD_TIME": 1724623848377,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1722016772000
+      },
+      "Complete": {
+        "sys_id": "7d34f0a497fce550b2e1f97e6253afce",
+        "sys_updated_on": "2023-02-24 12:34:54",
+        "SERVER_MOD_TIME": 1677260094000,
+        "LOCAL_MOD_TIME": 1724623848427,
+        "CURRENT_LOCAL_MOD_TIME": 1724623848427,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1677260094000
+      },
+      "Approve": {
+        "sys_id": "6fc71352974d2110b2e1f97e6253af6f",
+        "sys_updated_on": "2024-08-25 22:29:34",
+        "SERVER_MOD_TIME": 1724639374000,
+        "LOCAL_MOD_TIME": 1724628069820,
+        "CURRENT_LOCAL_MOD_TIME": 1724628069820,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724639374000
+      },
+      "Save": {
+        "sys_id": "369cb50c97bc6550b2e1f97e6253af65",
+        "sys_updated_on": "2023-02-18 23:19:01",
+        "SERVER_MOD_TIME": 1676780341000,
+        "LOCAL_MOD_TIME": 1724623848501,
+        "CURRENT_LOCAL_MOD_TIME": 1724623848501,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1676780341000
+      },
+      "Submit": {
+        "sys_id": "2f137d3f97a82550b2e1f97e6253af6a",
+        "sys_updated_on": "2024-08-25 22:19:08",
+        "SERVER_MOD_TIME": 1724638748000,
+        "LOCAL_MOD_TIME": 1724628069894,
+        "CURRENT_LOCAL_MOD_TIME": 1724628069894,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724638748000
+      },
+      "Save as Draft": {
+        "sys_id": "d783b57f97a82550b2e1f97e6253afa5",
+        "sys_updated_on": "2024-08-25 22:19:29",
+        "SERVER_MOD_TIME": 1724638769000,
+        "LOCAL_MOD_TIME": 1724628069845,
+        "CURRENT_LOCAL_MOD_TIME": 1724628069845,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724638769000
+      },
+      "Reject": {
+        "sys_id": "98e71f52974d2110b2e1f97e6253afe0",
+        "sys_updated_on": "2024-08-25 22:29:45",
+        "SERVER_MOD_TIME": 1724639385000,
+        "LOCAL_MOD_TIME": 1724628069790,
+        "CURRENT_LOCAL_MOD_TIME": 1724628069790,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724639385000
+      }
+    },
+    "Script Includes": {
+      "TaskManager": {
+        "sys_id": "4b0a803397e02550b2e1f97e6253afa4",
+        "sys_updated_on": "2024-08-29 13:15:36",
+        "SERVER_MOD_TIME": 1724951736000,
+        "LOCAL_MOD_TIME": 1724937369458,
+        "CURRENT_LOCAL_MOD_TIME": 1724937369458,
+        "lastmodified": 1724937369689,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724951736000
+      },
+      "Authenticated": {
+        "sys_id": "7bebf17b97e82550b2e1f97e6253af3d",
+        "sys_updated_on": "2024-09-24 12:43:55",
+        "SERVER_MOD_TIME": 1727196235000,
+        "LOCAL_MOD_TIME": 1727181834521,
+        "CURRENT_LOCAL_MOD_TIME": 1727181834521,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1727196235000,
+        "lastmodified": 1727181834850
+      },
+      "AuthenticatedTest": {
+        "sys_id": "4444890497b86550b2e1f97e6253affb",
+        "sys_updated_on": "2024-09-03 12:35:08",
+        "SERVER_MOD_TIME": 1725381308000,
+        "LOCAL_MOD_TIME": 1725366907061,
+        "CURRENT_LOCAL_MOD_TIME": 1725366907061,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1725381308000,
+        "lastmodified": 1725366907342
+      },
+      "TaskManagerTest": {
+        "sys_id": "9e3b012497702950b2e1f97e6253af68",
+        "sys_updated_on": "2025-10-29 20:32:56",
+        "SERVER_MOD_TIME": 1761784376000,
+        "LOCAL_MOD_TIME": 1761769974840,
+        "CURRENT_LOCAL_MOD_TIME": 1761769974840,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1761784376000,
+        "lastmodified": 1761769975234
+      },
+      "GroupUtils": {
+        "sys_id": "9c44690c973c6550b2e1f97e6253aff3",
+        "sys_updated_on": "2024-08-29 13:04:46",
+        "SERVER_MOD_TIME": 1724951086000,
+        "LOCAL_MOD_TIME": 1724936684784,
+        "CURRENT_LOCAL_MOD_TIME": 1724936684784,
+        "lastmodified": 1724936685158,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724951086000
+      },
+      "GroupUtilsTest": {
+        "UNCHANGED": true,
+        "LIVE": true,
+        "CURRENT_LOCAL_MOD_TIME": 1725366467635,
+        "sys_id": "ac855b39471c121058ceeb02d16d4364",
+        "sys_updated_on": "2024-09-03 12:27:48",
+        "lastmodified": 1725366467926,
+        "SERVER_MOD_TIME": 1725380868000,
+        "CURRENT_SERVER_MOD_TIME": 1725380868000,
+        "LOCAL_MOD_TIME": 1725366467635
+      }
+    },
+    "Business Rules": {
+      "Task onComplete": {
+        "sys_id": "e1335c5097b8a550b2e1f97e6253af04",
+        "sys_updated_on": "2023-02-18 23:21:05",
+        "SERVER_MOD_TIME": 1676780465000,
+        "LOCAL_MOD_TIME": 1724623848574,
+        "CURRENT_LOCAL_MOD_TIME": 1724623848574,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1676780465000
+      },
+      "Task onSubmit": {
+        "sys_id": "df5bf53b97e82550b2e1f97e6253afbf",
+        "sys_updated_on": "2023-04-12 12:06:01",
+        "SERVER_MOD_TIME": 1681315561000,
+        "LOCAL_MOD_TIME": 1724623848597,
+        "CURRENT_LOCAL_MOD_TIME": 1724623848597,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1681315561000
+      },
+      "Task onQuery": {
+        "sys_id": "84c0cca297016110b2e1f97e6253af5a",
+        "sys_updated_on": "2024-08-27 02:40:58",
+        "SERVER_MOD_TIME": 1724740858000,
+        "LOCAL_MOD_TIME": 1724933806291,
+        "CURRENT_LOCAL_MOD_TIME": 1724933806291,
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724740858000
+      }
+    }
+  },
+  "Client Development": {
+    "Client Scripts": {
+      "Task onDueDateChange": {
+        "sys_id": "bebdb8b447941a1058ceeb02d16d43f9",
+        "LIVE": true,
+        "UNCHANGED": true,
+        "CURRENT_SERVER_MOD_TIME": 1724643354000,
+        "sys_updated_on": "2024-08-25 23:35:54",
+        "SERVER_MOD_TIME": 1724643354000,
+        "LOCAL_MOD_TIME": 1724628954693,
+        "CURRENT_LOCAL_MOD_TIME": 1724628954693,
+        "lastmodified": 1724628954932
+      }
+    }
+  }
+}
