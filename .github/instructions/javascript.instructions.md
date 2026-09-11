@@ -106,9 +106,8 @@ This project uses `tsconfig.json` for type checking:
 - `strictNullChecks: true` - Null and undefined must be handled explicitly
 - `checkJs: true` / `allowJs: true` - plain `.js` files are type-checked like `.ts`
 - `strict: false` overall, but the `typescript-strict-plugin` entry in `plugins`
-  applies full strict-mode checking to specific paths (currently Script Includes) —
-  check `tsconfig.json` and the relevant app-specific instructions file for the exact
-  paths this applies to
+  applies full strict-mode checking to configured paths; check `tsconfig.json` for the
+  exact paths
 
 ### Validation
 
@@ -122,7 +121,9 @@ Run `npx tsc` to validate all type annotations. Zero errors required before comm
 - Always handle potential null/undefined values
 - Use type guards for runtime type checking
 - Prefer specific types over `any`
-- Document all public APIs with JSDoc
+- Document all functions with JSDoc, including their inputs and outputs
+- Use single-quoted strings unless double quotes are necessary
+- Use four-space indentation
 
 ### Array Methods Examples
 
@@ -161,10 +162,10 @@ var oldStyle = 'avoid';
 ## Naming Conventions
 
 - Use PascalCase for component names, interfaces, and type aliases
-- Use camelCase for variables, functions, and methods
+- Use camelCase for variables, functions, and methods, beginning with a lowercase character
 - Prefix private class members with underscore (_)
 - Use ALL_CAPS for constants
-- Use descriptive parameter names (e.g., `message` not `msg`)
+- Use concise, human-readable, semantic names for variables, functions, and parameters (for example, `message` rather than `msg` and `taskRecord` rather than `gr`)
 
 ## Code Quality
 
@@ -173,6 +174,8 @@ var oldStyle = 'avoid';
 - Add error handling for user inputs and API calls
 - Use readonly arrays when appropriate: `/** @type {readonly Task[]} */`
 - Cast types explicitly when necessary: `/** @type {HTMLInputElement} */ (element)`
+- Remove commented-out code once debugging is complete.
+- Use single-line comments in function bodies, except for inline JSDoc type definitions.
 
 ## Example Complete Class
 
@@ -226,10 +229,3 @@ class UserManager {
     }
 }
 ```
-
-## Performance Considerations
-
-- Minimize DOM manipulations
-- Use event delegation where appropriate
-- Implement debouncing for frequent operations
-- Lazy load when beneficial

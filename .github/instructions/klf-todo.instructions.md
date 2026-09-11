@@ -8,6 +8,15 @@ applyTo: 'KLF Todo/**, lib/**'
 This workspace currently contains a single ServiceNow scoped application, **KLF Todo**,
 whose source lives in `KLF Todo/src/`.
 
+## Shared Instructions
+
+These instructions supplement the workspace-wide guidance:
+
+- Follow [javascript.instructions.md](javascript.instructions.md) for JavaScript
+  style, JSDoc type annotations, and TypeScript validation.
+- Follow [servicenow.instructions.md](servicenow.instructions.md) for ServiceNow
+  artifact contexts, platform development practices, and live-instance queries.
+
 ## Identity
 
 - **Application name:** KLF Todo

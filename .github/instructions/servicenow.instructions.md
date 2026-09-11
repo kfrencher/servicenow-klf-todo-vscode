@@ -197,8 +197,65 @@ itself. To get the actual field/data model:
    application-specific fields.
 
 ## ServiceNow Development Best Practices
+
+### Type Checking
+
+The `typescript-strict-plugin` in `tsconfig.json` currently applies full strict-mode
+checking to Script Includes. Check `tsconfig.json` and the relevant app-specific
+instructions file for the exact paths this applies to.
+
+### Script Includes
+
 1. **Use Script Includes for Reusable Code:**
    - Encapsulate reusable logic in Script Includes to promote code reuse and maintainability.
    - Script Includes run on the server side, so ensure that any client-side logic is separated appropriately. Client side code executes in the browser, while server side code runs on the ServiceNow server.
-   - When querying the database with GlideRecord use a descriptive variable name for the GlideRecord object, e.g., `var userGR = new GlideRecord('sys_user');`
+   - When querying the database with GlideRecord use a descriptive variable name for the GlideRecord object, e.g., `const userGR = new GlideRecord('sys_user');`
    - There is a common library that should be used for common operations, avoid duplicating code that already exists in the common library. Its location varies per application — check that application's specific instructions file (e.g. `klf-todo.instructions.md`) for the exact path.
+   - Use an immediately invoked function expression (IIFE) that returns an object from
+     a Script Include. This keeps private implementation details out of the global
+     namespace and lets consumers call public methods without constructing the Script
+     Include with `new`.
+
+```javascript
+const MyObj = (function () {
+    const privateValue = '';
+
+    function privateFunction() {}
+
+    return new (class {
+        /**
+         * @param {string} message
+         * @returns {void}
+         */
+        log(message) {
+            gs.log(message);
+        }
+    })();
+})();
+
+MyObj.log('my test message');
+```
+
+Do not use `Class.create()` and prototype-based Script Includes that require callers to
+instantiate them with `new`.
+
+### Server-side Logic
+
+- Use `while` loops when iterating `GlideRecord` results.
+- Keep implementation code out of UI Actions, Scheduled Jobs, ACLs, and Business Rules.
+  Put reusable logic in Script Includes so it can be tested, refactored, and reused.
+- Group related table operations in one Script Include rather than creating one Script
+  Include per function. Name it `${TableName}Manager`; for example, use
+  `TodoTaskManager` for `x_todo_task` operations.
+- When a Script Include uses the Table Manager pattern, follow
+  [table-manager-pattern.md](table-manager-pattern.md) for its naming, structure, and
+  Business Rule, UI Action, and ACL function conventions.
+- Minimize Client Scripts and Business Rules that handle the same condition. Consolidate
+  that behavior in one component and call multiple functions from it.
+
+### Client-side Behavior
+
+- Prefer UI Policies to Client Scripts for showing or hiding fields and making fields
+  mandatory, unless a Client Script is specifically necessary.
+- Prefix Business Rule, Client Script, and UI Policy names with the table name they
+  apply to, such as `TASK onStateChange`.

@@ -1,6 +1,6 @@
 /**
  * Object for managing todo tasks.
- * This object uses the Table Manager Pattern. Refer to {@link https://1drv.ms/b/s!AsRNQDyGY_i4n2j8ckxe3J9vZBk2?e=bbZT2g} for more information.
+ * This object uses the Table Manager Pattern. 
  * 
  * Initial status will be DRAFT.
  * Then user will submit the task using {@link TaskManager.submit} UI Action.
