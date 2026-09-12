@@ -168,7 +168,7 @@ npx @servicenow/sdk query <table> -q "<encoded query>" -f "<comma-separated fiel
 ```
 
 - `<table>` — the table name (e.g. `sys_user`, `x_<scope>_<app>_task`)
-- `-q`/`--query` — an encoded query string (`sysparm_query`), e.g. `active=true^priority<=2`
+- `-q`/`--query` — an encoded query string (`sysparm_query`), e.g. `active=true^priority<=2`. this is required. a value must be provided even if an empty string.
 - `-f`/`--fields` — comma-separated fields to return (`sysparm_fields`); omit to return all fields
 - `--output json` — machine-readable JSON envelope (`{ ok, hasMore, nextOffset, records }`)
 - Other useful flags: `--limit`, `--offset`, `--display-value`, `-a/--auth` (credential
